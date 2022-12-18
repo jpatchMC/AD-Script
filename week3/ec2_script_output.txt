@@ -1,0 +1,18 @@
+wait for start up
+
+i-0dc4f9785b1202085 pending
+
+i-0dc4f9785b1202085 pending
+
+Pulic ip: 54.89.77.32 
+
+tag: None 
+
+ name is Josh 
+
+waiting for termination
+
+i-0dc4f9785b1202085 running
+
+i-0dc4f9785b1202085 Terminated
+

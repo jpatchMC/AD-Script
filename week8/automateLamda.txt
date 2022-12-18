@@ -1,0 +1,24 @@
+
+client = boto3.client('lambda')
+
+
+
+you need a deployment package and an execution role.
+the deployment package is an archive file or container image that contains code
+execution role is giving permission to use an AWS service....
+
+response = client.add_permission(
+    FunctionName='string',NEED
+    StatementId='string',NEED
+    Action='string', NEED example : lamda:InovokeFunction
+    Principal='string',NEED
+    SourceArn='string', NEED make script (like assignment) to get
+    SourceAccount='string',
+    EventSourceToken='string',
+    Qualifier='string',
+    RevisionId='string',
+    PrincipalOrgID='string',
+    FunctionUrlAuthType='NONE'|'AWS_IAM'
+)
+
+response = client.create_function(  to make the actual function...probably need to make it before setting permissions and pass it into above

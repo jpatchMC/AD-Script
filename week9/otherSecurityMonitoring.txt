@@ -1,0 +1,30 @@
+ well I would imagine the most pertinent stuff besides security would be billing
+ however I wouldn't have access to that for testing.
+ however i'd still like to play with it.
+ 
+ client = boto3.client('budgets')
+ response = client.describe_budget(
+    AccountId='string',
+    BudgetName='string'
+)
+response :: {
+    'Budget': {
+        'BudgetName': 'string',
+        'BudgetLimit': {
+            'Amount': 'string', right here would be nice, through a few loops and set a varible so it can be compared to 'ForecastedSpend'
+            'Unit': 'string'
+there is also "HistoricalOptions" that could be useful in another function
+
+client = boto3.client('ec2')
+response = client.describe_vpn_connections()
+'CustomerGatewayId' 'State' 'Options : OutsideIpAddressType'
+for who is outside connected using a VPN.
+
+client = boto3.client('ec2') AFTER RUNNING SOMETHING THAT LOOKS FOR STOPPED OR TERMED INSTANCES
+response = client.get_console_output(InstanceId='string')
+{
+    'InstanceId': 'string',
+    'Output': 'string',
+    'Timestamp': datetime(2015, 1, 1)
+}
+you could use it to check a sys log to see why it shut unexpectedly

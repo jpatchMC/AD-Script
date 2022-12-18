@@ -1,0 +1,35 @@
+for secgrp in response['SecurityGroups']:
+    print(secgrp)
+    print(secgrp['GroupName'])
+    for allow in secgrp['IpPermissions']:
+        #print(allow)
+        for specific in allow['IpRanges']:
+            print(specific)
+            if specific == {'CidrIp': '0.0.0.0/0'}:
+                #print(specific['GroupName'])
+            #for Cidr in specific['CidrIp']:
+                #Cidr = []
+                #print(Cidr)
+                #if allow['IpRanges']['CidrIp'] == [0.0.0.0/0]:Cidr['IpRanges']
+                print(response['GroupName'])
+
+
+Ipok = secgrp['IpPermissions']
+        try:
+            slclst = Ipok[0]  # YUP BRITTLE I WAS LOST
+            # print(slclst['IpRanges'])
+            try:
+                slc2 = slclst['IpRanges']
+                slc3 = slc2[0]
+                # print(slc3)
+                if slc3['CidrIp'] == '0.0.0.0/0':
+                    print(f"{secgrp['GroupName']} is open to internet")
+            except:
+                print(
+                    f"either there are no rules set of they are not open to the internet at large")
+        except:
+            print(
+                f"either there are no rules set of they are not open to the internet at large")
+if not cidrval:
+                        print("nothing set to internet")
+                        print(cidrval)

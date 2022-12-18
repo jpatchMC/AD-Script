@@ -1,0 +1,5 @@
+azure-mgmt-web the web apps library (almost called it a function)
+the function is web_client.web_apps.create_or_update for making/deploy a web apps
+
+azure-keyvault-keys (azure-identity is already present with our build but its required) azure.keyvault.keys
+key_client.get_key(pass name here)
